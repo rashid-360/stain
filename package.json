@@ -27,6 +27,13 @@
       "title": "Unstain Line"
   }
     ],
+    "keybindings": [
+      {
+        "command": "extension.toggleStain",
+        "key": "ctrl+y",
+        "when": "editorTextFocus"
+      }
+    ],
     "menus": {
         "editor/context": [
           {
