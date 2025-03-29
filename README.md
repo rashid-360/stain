@@ -14,17 +14,22 @@ When working with large code files, it's easy to lose track of where you were. *
 
 ### Staining a Line
 1. Right-click on any line and select **"Stain Line"**.
-2. The line will be highlighted with a green stain.
-3. The stain will also be visible in the **scroll bar** for easy navigation.
+   ![Screenshot_20250329_130340](https://github.com/user-attachments/assets/c9746926-9323-4a49-8ca8-dd1d16bc655d)
+3. The line will be highlighted with a green stain.
+   ![Screenshot_20250329_130349](https://github.com/user-attachments/assets/b845556a-381a-4796-b914-1ac1927754ec)
 
+5. The stain will also be visible in the **scroll bar** for easy navigation.
 ### Unstaining a Line
-1. Right-click on a stained line and select **"Unstain Line"**.
-2. The highlight will be removed.
+1. Right-click on a stained line and select **"Unstain Line"**. 
+   ![Screenshot_20250329_130358](https://github.com/user-attachments/assets/233fedfa-7cfb-42a0-a570-e0e6e9a42d47)
+
+   
+3. The highlight will be removed.
 
 ### Using Keyboard Shortcuts
 - Press **`Ctrl+Y`** to stain an unstained line.
 - Press **`Ctrl+Y`** again to remove the stain from a stained line.
-- The shortcut is context-aware, meaning it will **toggle** the stain.
+
 
 ## Configuration
 No additional configuration is required—just install and start marking lines!
