@@ -6,7 +6,7 @@
   "author": {
     "name": "muhammedrashid"
   },
-  "version": "0.0.3",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.98.0"
   },
@@ -24,29 +24,39 @@
     },
     {
       "command": "extension.unstainLine",
-      "title": "Unstain Line"
+      "title": "Unstain Line "
+  },
+  {
+    "command": "extension.toggleStain",
+    "title": "Toggle Stain"
   }
     ],
     "keybindings": [
       {
-        "command": "extension.toggleStain",
+        "command": "extension.stainLine",
         "key": "ctrl+y",
-        "when": "editorTextFocus"
-      }
+        "when": "editorTextFocus && !isLineStained"
+      },
+      
+    {
+      "command": "extension.unstainLine",
+      "key": "ctrl+y",
+      "when": "editorTextFocus && isLineStained"
+    }
     ],
     "menus": {
-        "editor/context": [
-          {
-            "command": "extension.stainLine",
-            "when": "editorTextFocus && !isLineStained",
-            "group": "navigation"
+      "editor/context": [
+        {
+          "command": "extension.stainLine",
+          "when": "editorTextFocus && !isLineStained",
+          "group": "navigation"
         },
         {
-            "command": "extension.unstainLine",
-            "when": "editorTextFocus &&  isLineStained",
-            "group": "navigation"
+          "command": "extension.unstainLine",
+          "when": "editorTextFocus && isLineStained",
+          "group": "navigation"
         }
-        ]
+      ]
     }
     
   },
