@@ -3,17 +3,18 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
    
 	const stainDecoration = vscode.window.createTextEditorDecorationType({
-		backgroundColor: 'rgba(43, 255, 0, 0.7)', // Light red stain
+		backgroundColor: 'rgba(43, 255, 0, 0.7)', // Light green stain
 		isWholeLine: true, // Extends stain to full line width
 		overviewRulerColor: 'rgba(43, 255, 0, 1)', // Makes stain visible in minimap
 		overviewRulerLane: vscode.OverviewRulerLane.Full, // Ensures visibility in minimap
-		color:'black'
+		color: 'black'
 	});
 
     let stainedLines = new Set<number>(); // Track stained lines
 
     function updateContext(lineNumber: number) {
-        vscode.commands.executeCommand('setContext', 'isLineStained', stainedLines.has(lineNumber));
+        const isStained = stainedLines.has(lineNumber);
+        vscode.commands.executeCommand('setContext', 'isLineStained', isStained);
     }
 
     let stainCommand = vscode.commands.registerCommand('extension.stainLine', () => {
@@ -31,9 +32,11 @@ export function activate(context: vscode.ExtensionContext) {
         if (!editor) return;
 
         const lineNumber = editor.selection.active.line;
-        stainedLines.delete(lineNumber); // Remove stain from this line
-        applyStains(editor);
-        updateContext(lineNumber);
+        if (stainedLines.has(lineNumber)) {
+            stainedLines.delete(lineNumber); // Remove stain from this line
+            applyStains(editor);
+            updateContext(lineNumber);
+        }
     });
 
 	function applyStains(editor: vscode.TextEditor) {
@@ -42,6 +45,7 @@ export function activate(context: vscode.ExtensionContext) {
 		);
 		editor.setDecorations(stainDecoration, decorations);
 	}
+
     vscode.window.onDidChangeTextEditorSelection(event => {
         const editor = event.textEditor;
         const lineNumber = editor.selection.active.line;
