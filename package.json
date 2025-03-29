@@ -1,6 +1,7 @@
 {
   "name": "stain",
   "displayName": "Stain",
+  "publisher": "muhammedrashid",
   "description": "Stain is a VS Code extension that helps you keep track of important lines in your code. Easily mark lines with a green highlight and locate them quickly using the minimap. Click on a stained line to navigate back to it, and remove stains with a simple right-click. Never lose track of your code again!",
   "author": {
     "name": "muhammedrashid"
