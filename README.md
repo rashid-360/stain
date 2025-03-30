@@ -8,7 +8,7 @@ When working with large code files, it's easy to lose track of where you were. *
 - Locate stained lines using the **scroll bar**.
 - Click on a stained mark in the scroll bar to **jump back** to that line.
 - **Easily remove stains** by right-clicking and selecting "Unstain".
-- **Use a keyboard shortcut (`Ctrl+Y`)** to toggle staining on and off.
+- **Use a keyboard shortcut (`Ctrl+m`)** to toggle staining on and off.
 
 ## How to Use
 
@@ -27,8 +27,8 @@ When working with large code files, it's easy to lose track of where you were. *
 3. The highlight will be removed.
 
 ### Using Keyboard Shortcuts
-- Press **`Ctrl+Y`** to stain an unstained line.
-- Press **`Ctrl+Y`** again to remove the stain from a stained line.
+- Press **`Ctrl+m`** to stain an unstained line.
+- Press **`Ctrl+m`** again to remove the stain from a stained line.
 
 
 ## Configuration
