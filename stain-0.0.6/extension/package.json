@@ -6,7 +6,7 @@
   "author": {
     "name": "muhammedrashid"
   },
-  "version": "0.1.0",
+  "version": "0.0.9",
   "engines": {
     "vscode": "^1.98.0"
   },
@@ -34,13 +34,13 @@
     "keybindings": [
       {
         "command": "extension.stainLine",
-        "key": "ctrl+m",
+        "key": "ctrl+y",
         "when": "editorTextFocus && !isLineStained"
       },
       
     {
       "command": "extension.unstainLine",
-      "key": "ctrl+m",
+      "key": "ctrl+y",
       "when": "editorTextFocus && isLineStained"
     }
     ],
